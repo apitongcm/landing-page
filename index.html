@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -18,27 +19,29 @@
           <i id="hamburger"class="fas fa-hamburger fa-2x"></i>
           <i id="close" class="far fa-times-circle fa-2x"></i>
           <ul class="menu">
-            <li><a href="#" class="link">About</a></li>
-            <li><a href="#" class="link">Services</a></li>
-            <li><a href="#" class="link">Product</a></li>
-            <li><a href="#" class="link">CONTACT</a></li>
+            <li><a href="#about" class="link">About</a></li>
+            <li><a href="#services" class="link">Services</a></li>
+            <li><a href="#products" class="link">Product</a></li>
+            <li><a href="#contact" class="link">CONTACT</a></li>
           </ul>
         </div>
       </nav>
-      <div class="hero"><center>
+      <div class="hero"  data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"><center>
         <h1> We are creatives</h1>
         <img src="./images/icon-arrow-down.svg" alt="arrow">
       </center>
       </div>
     </div>
-    <div class="content">
+    <div id="about" class="content">
       <div class="row eggnog">
         <div class="col2">
-          <div class="text">
+          <div class="text"  data-aos="fade-right" data-aos-duration="1500">
               <h1>Transform your brand</h1>
               <p>We are a full-service creative agency specializing in helping brands grow fast. 
                Engage your clients through compelling visuals that do most of the marketing for you.</p>
-              <button style="text-decoration-color:yellow;">Learn more</button>
+              <button style="text-decoration-color:yellow;" onclick="clickGit()">Learn more</button>
           </div>
          
         </div>
@@ -55,22 +58,27 @@
           <img src="./images/desktop/image-stand-out.jpg" alt="pinkshake">   
         </div>
         <div class="col2">
-          <div class="text">
+          <div class="text"  data-aos="fade-up" data-aos-duration="1500">
               <h1>Stand out to the right audience</h1>
               <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
-              <button style="text-decoration-color:pink;" >Learn more</button>
+              <button style="text-decoration-color:pink;" onclick="clickGit()">Learn more</button>
           </div>
         </div>
       </div>
       <div class="row">
-        
-        <div class="col2 heroes-1 context">
-          <h1>Graphic design</h1>
-          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        <div id="services" class="col2  heroes-1 context">
+          <div data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1500" class="effect">
+            <h1>Graphic design</h1>
+            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+          </div>
         </div>
         <div class="col2 heroes-2 context">
-          <h1>Photography</h1>
-          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          <div data-aos="fade-up" data-aos-easing="linear"
+          data-aos-duration="1500" class="effect">
+            <h1>Photography</h1>
+            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -99,7 +107,7 @@
         </div>
       </center>
     </div>
-    <div class="images">
+    <div id="products" class="images">
       <div class="col4">
         <source media="(min-width:700px)" srcset="./images/desktop/image-gallery-milkbottles.jpg">
         <source media="(min-width:325px)" srcset="./images/mobile/image-gallery-milkbottles.jpg">
@@ -125,13 +133,13 @@
       <center>
         <img src="./images/logo.svg" alt="logo">
         <ul class="fmenu">
-          <li><a href="#" class="flink">About</a></li>
-          <li><a href="#" class="flink">Services</a></li>
-          <li><a href="#" class="flink">Products</a></li>
+          <li><a href="#about" class="flink">About</a></li>
+          <li><a href="#services" class="flink">Services</a></li>
+          <li><a href="#products" class="flink">Products</a></li>
         </ul>
 
        
-          <div class="social-icons footer">
+          <div id="contact" class="social-icons footer">
               <a href="https://twitter.com/ApitongCarl">
                   <i class="fab fa-twitter fa"></i>
           
@@ -149,7 +157,7 @@
           
           <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Carl Marwin J. Apitong</a>.
+            Coded by <a href="https://apitongcm-cv.netlify.app/">Carl Marwin J. Apitong</a>.
           </div></center>
     </div>
   </div>
@@ -157,6 +165,7 @@
  
 
 <script src="https://kit.fontawesome.com/2cbd9951c0.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

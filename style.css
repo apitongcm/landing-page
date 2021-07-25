@@ -28,6 +28,14 @@
     box-sizing: border-box;
 }
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 .container{
     width:100%;
     height:100vh;
@@ -37,15 +45,14 @@
 /* NAVBAR */
 
 nav{
-
+    width:100%;
     padding:1.5rem;
 }
-
 #hamburger, #close {
     display: none;
 }
 
-nav img { 
+nav img {
     padding-top:10px;
     width:200px;
 }
@@ -58,7 +65,7 @@ nav img {
 }
 
 .menu li{
-    
+
     padding:10px 20px;
     list-style: none;
 }
@@ -82,12 +89,12 @@ nav img {
 .jumbotron{
     background:url('./images/desktop/image-header.jpg') center no-repeat;
     background-size: cover;
-    width:100vw;
+    width:100%;
     height:100vh;
 }
 
 .hero{
-    font-size:50px;
+    font-size:40px;
     margin-top:200px;
 }
 
@@ -125,9 +132,7 @@ nav img {
 .text h1{
     font-size: 80px;
     margin:100px 0 30px 0;
-    line-height:5rem;
     font-family: var(--font700);
-    font-weight:900;
     color: black;
 }
 
@@ -144,21 +149,21 @@ nav img {
 
 /* mini-heroes */
 .heroes-1 {
-    background:url('./images/desktop/image-graphic-design.jpg') no-repeat;
+    background:url('./images/desktop/image-graphic-design.jpg') center no-repeat;
     background-size: cover;
     width:100%;
     height:80vh;
     color:var(--drk-cyan);
-    
+
 }
 
 .heroes-2 {
-    background:url('./images/desktop/image-photography.jpg') center no-repeat;
+    background:url('./images/desktop/image-photography.jpg')center no-repeat;
     background-size: cover;
     width:100%;
     height:80vh;
     color:var(--drk-blue);
-    
+
 }
 
 .context{
@@ -247,7 +252,7 @@ nav img {
 
 .col4{
     width:25%;
-    
+
 }
 
 .col4 img{
@@ -256,7 +261,7 @@ nav img {
 
 /* footer */
 
-.footer { 
+.footer {
     background-color: var(--mod-cyan);
     width:100%;
     height:auto;
@@ -269,10 +274,10 @@ nav img {
     justify-content: center;
 }
 
-li{ 
+li{
     padding:10px 20px;
     list-style: none;
-    display: flex;   
+    display: flex;
  }
 
 .flink{
@@ -281,7 +286,29 @@ li{
     font-size:1.5rem;
 }
 
-.footer img{ 
+.flink:hover{
+    color:rgb(5, 255, 17);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.footer i:hover{
+    color:rgb(5, 255, 17);
+    transform: scale(1.2);
+}
+
+.attribution a:hover{
+    color:rgb(5, 255, 17);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.footer img{
     padding:50px 0px 30px 0px;
     width:200px;
     color: var(--drk-cyan);
@@ -304,12 +331,12 @@ li{
 }
 
 @media only screen and (max-width:1025px){
-    
+
     .hero{
         margin-top:120px;
     }
-    
-    .hero h1{ 
+
+    .hero h1{
         font-size:8vw;
     }
 
@@ -322,7 +349,7 @@ li{
         font-size:2vw;
     }
 
-    .text h1 { 
+    .text h1 {
         font-size:4vw;
         line-height:5vh;
     }
@@ -337,7 +364,7 @@ li{
         font-size:1rem;
     }
 
-    .context p { 
+    .context p {
         padding:20px 50px;
         font-size:2vw;
     }
@@ -380,7 +407,7 @@ li{
     .attribution{
         font-size:1.5vw;
     }
-    
+
 }
 
 @media (max-width:900px) and (min-width:350px) {
@@ -391,9 +418,24 @@ li{
         box-sizing: border-box;
     }
 
+
     nav img{
         width:150px;
         padding:0 10px;
+    }
+
+    #close{
+        display:hidden;
+        position: absolute;
+        right:50px;
+        top:90px;
+        color:black;
+        z-index:200;
+    }
+
+    #close:hover{
+        transform: scale(1.3);
+        color:rgb(196, 152, 57);
     }
 
     #hamburger{
@@ -410,16 +452,18 @@ li{
     }
 
     .menu{
-        transform: translateY(-110%);
+        transform: translateY(-130%);
         display:flex;
         flex-direction:column;
         background-color:var(--white);
         width:90%;
+        padding-top:50px;
+        z-index:100;
     }
 
     .menu li{
         margin:10px 60px;
-        
+
     }
 
     .link{
@@ -427,7 +471,7 @@ li{
         font-size:18px;
         padding:5px 30px;
         text-align:center;
-        width:50vw; 
+        width:50vw;
     }
 
     .link:hover{
@@ -437,7 +481,7 @@ li{
     }
 
     .showmenu{
-        transform: translateY(0);
+        transform: translateY(50px);
     }
 
     .jumbotron{
@@ -468,17 +512,30 @@ li{
 
     .col2 .text{
         text-align: center;
-        font-size:5vw;
+        font-size:4vw;
     }
 
-    .text h1{ 
-        font-size:10vw;
-        font-weight:700;
+    .text h1{
+        font-size:8vw;
+
     }
 
     .text button{
-        font-size:6vw;
+        font-size:4vw;
         padding-bottom:50px;
+    }
+
+    .heroes-1 .heroes-2 {
+        height:auto;
+    }
+
+    .context h1{
+        padding-top:220px
+    }
+
+    .context p{
+        padding:40px 0px;
+        font-size:4vw;
     }
 
     .feedback{
@@ -500,7 +557,7 @@ li{
         flex-direction:column;
     }
 
-    .col3 { 
+    .col3 {
         padding:0 30px;
     }
 
@@ -524,5 +581,57 @@ li{
         margin:0;
         font-size:4vw;
     }
-    
+
+    .images{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col4{
+        width:100%;
+    }
+
+    .flink{
+        font-size:5vw;
+    }
+
+    .attribution{
+        font-size:3vw;
+        padding:0 100px;
+        padding-bottom:30px;
+    }
+}
+
+@media (max-width:900px) and (min-width:700px) {
+    .link{
+        width:100%;
+    }
+
+    .menu{
+        padding-bottom:50px;
+    }
+
+    .context{
+        padding:100px 0;
+    }
+
+    .col2 .text {
+        padding:10px 50px;
+    }
+
+    .context h1{
+        font-size:4vw;
+    }
+
+    .col3 {
+        padding:0 50px;
+    }
+
+    .context p{
+        padding:0 50px;
+    }
+
+    .attribution {
+        padding:0 200px;
+    }
 }
