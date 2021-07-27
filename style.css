@@ -95,7 +95,7 @@ nav img {
 
 .hero{
     font-size:40px;
-    margin-top:200px;
+    margin-top:140px;
 }
 
 .hero h1 {
@@ -125,14 +125,14 @@ nav img {
 
 .col2 .text{
     font-size:30px;
-    padding:100px;
+    padding:50px 60px;
     color:var(--very-blue);
 }
 
 .text h1{
-    font-size: 80px;
-    margin:100px 0 30px 0;
-    font-family: var(--font700);
+    font-size: 70px;
+    margin:80px 0 0 0;
+    font-family: var(--font500);
     color: black;
 }
 
@@ -169,6 +169,7 @@ nav img {
 .context{
     text-align: center;
     width:50%;
+    height: auto;
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -192,10 +193,9 @@ nav img {
 
 .feedback{
     width:100%;
-    height:100vh;
-    padding:150px;
+    height:auto;
     font-size:1.5rem;
-    padding-top:200px;
+    padding:100px 150px 100px;
     background-color: var(--white);
     font-family: var(--font600);
 }
@@ -269,13 +269,13 @@ nav img {
 }
 
 .fmenu{
-    padding:20px;
+    padding:20px 0;
     display: flex;
     justify-content: center;
 }
 
 li{
-    padding:10px 20px;
+    padding:5px 20px;
     list-style: none;
     display: flex;
  }
@@ -309,15 +309,15 @@ button:hover{
 }
 
 .footer img{
-    padding:50px 0px 30px 0px;
+    padding:50px 0px 10px 0px;
     width:200px;
     color: var(--drk-cyan);
 }
 
 .footer i {
     font-size:2rem;
-    margin:0 20px;
-    padding-bottom:50px;
+    margin:0 10px;
+    padding-bottom:30px;
     color:var(--drk-cyan);
 }
 
@@ -330,14 +330,15 @@ button:hover{
     color:rgb(0, 26, 0);
 }
 
-@media only screen and (max-width:1025px){
+@media only screen and (max-width:1030px){
 
     .hero{
+        height:100vh;
         margin-top:120px;
     }
 
     .hero h1{
-        font-size:8vw;
+        font-size:6vw;
     }
 
     .hero img{
@@ -351,7 +352,6 @@ button:hover{
 
     .text h1 {
         font-size:4vw;
-        line-height:5vh;
     }
 
     .text button {
@@ -512,7 +512,7 @@ button:hover{
 
     .col2 .text{
         text-align: center;
-        font-size:4vw;
+        font-size:3vw;
     }
 
     .text h1{
